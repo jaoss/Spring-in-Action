@@ -8,8 +8,7 @@
     http://www.springframework.org/schema/util 
     http://www.springframework.org/schema/util/spring-util.xsd">
 
-  <bean id="compactDisc"
-        class="soundsystem.properties.BlankDisc"
+  <bean id="compactDisc" class="soundsystem.properties.BlankDisc"
         p:title="Sgt. Pepper's Lonely Hearts Club Band"
         p:artist="The Beatles"
         p:tracks-ref="trackList" />
@@ -30,8 +29,7 @@
     <value>A Day in the Life</value>
   </util:list>
 
-  <bean id="cdPlayer"
-        class="soundsystem.properties.CDPlayer"
+  <bean id="cdPlayer" class="soundsystem.properties.CDPlayer"
         p:compactDisc-ref="compactDisc" />
 
 </beans>
