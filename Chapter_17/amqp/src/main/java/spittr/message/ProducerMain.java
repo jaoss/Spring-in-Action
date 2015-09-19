@@ -21,7 +21,7 @@ public class ProducerMain {
       System.out.println("Sending message #" + i);
       Spittle spittle = new Spittle((long) i, null, "Hello world (" + i + ")", new Date());
       template.convertAndSend(spittle);
-      Thread.sleep(5000);
+      Thread.sleep(2000);
     }
     
     System.out.println("Done!");

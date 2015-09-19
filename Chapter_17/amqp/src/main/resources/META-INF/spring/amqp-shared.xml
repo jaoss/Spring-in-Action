@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans:beans xmlns="http://www.springframework.org/schema/rabbit"
+<beans:beans 
+    xmlns="http://www.springframework.org/schema/rabbit"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:c="http://www.springframework.org/schema/c"
-	xsi:schemaLocation="http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit.xsd
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:c="http://www.springframework.org/schema/c"    
+	xsi:schemaLocation="http://www.springframework.org/schema/rabbit 
+                        http://www.springframework.org/schema/rabbit/spring-rabbit.xsd
+		                http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
   <!--<start id="amqp_connectionFactory_bean"/>--> 
-  <connection-factory id="connectionFactory" />
-  <!--<end id="amqp_connectionFactory_bean"/>--> 
-	
+  <connection-factory id="connectionFactory" 
+    username="admin"
+    password="admin"/>
+  <!--<end id="amqp_connectionFactory_bean"/>--> 	
 	
   <!--<start id="amqp_admin_and_queue_beans"/>--> 
-<admin connection-factory="connectionFactory"/>
+  <admin connection-factory="connectionFactory"/>
 
-<queue id="spittleAlertQueue" name="spittle.alerts" />
+  <queue id="spittleAlertQueue" name="spittle.alerts" />
   <!--<end id="amqp_admin_and_queue_beans"/>--> 
 	
   <fanout-exchange name="spittle.alert.exchange">
