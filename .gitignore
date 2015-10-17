@@ -62,3 +62,4 @@ MANIFEST.MF
 *.zip
 
 
+/nbproject/private/

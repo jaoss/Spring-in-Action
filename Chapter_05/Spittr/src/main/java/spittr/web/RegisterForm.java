@@ -2,13 +2,20 @@ package spittr.web;
 
 import spittr.Spitter;
 
-public class RegisterForm {
+public class RegisterForm {	
+	
   private String firstName;
+  
   private String lastName;
+  
   private String username;
+  
   private String password;
+  
   private String passwordConfirm;
+  
   private String email;
+  
   
   public String getFirstName() {
     return firstName;

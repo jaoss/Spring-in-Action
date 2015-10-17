@@ -20,7 +20,7 @@ public class FileUploadController {
   
     System.out.println(file.getSize());
     
-//    System.out.println("---->  " + file.getName() + "  ::  "  + file.getSize());
+   // System.out.println("---->  " + file.getName() + "  ::  "  + file.getSize());
     
     return "redirect:/";
   }

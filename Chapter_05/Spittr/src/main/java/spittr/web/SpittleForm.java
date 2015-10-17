@@ -43,4 +43,5 @@ public class SpittleForm {
   public void setLatitude(Double latitude) {
     this.latitude = latitude;
   }
+  
 }

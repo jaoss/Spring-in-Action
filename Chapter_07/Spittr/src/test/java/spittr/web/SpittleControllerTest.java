@@ -95,4 +95,5 @@ public class SpittleControllerTest {
     }
     return spittles;
   }
+  
 }
